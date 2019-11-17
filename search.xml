@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Qt MQTT模块编译</title>
+    <url>/2019/02/28/Qt-MQTT%E6%A8%A1%E5%9D%97%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<p>&copy; 原创内容，转载请注明出处。</p>
+<blockquote>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>Qt 5.10开始Qt官方提供了MQTT组件，但需要商业授权的账号在安装Qt时才提供选择安装,所以自己编译安装。</li>
+<li>操作系统：  Windows10</li>
+<li>环境：      Qt MSVC版 V5.12.0, VS2017</li>
+<li>工具：      git qmake nmake</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<img src="/2019/02/28/Qt-MQTT%E6%A8%A1%E5%9D%97%E7%BC%96%E8%AF%91/mqtt.png" class="" title="MQTT">
+
+<h2 id="第一步：下载-MQTT-库源码"><a href="#第一步：下载-MQTT-库源码" class="headerlink" title="第一步：下载 MQTT 库源码"></a>第一步：下载 MQTT 库源码</h2><p><code>git clone git://code.qt.io/qt/qtmqtt.git</code></p>
+<h2 id="第二步：编译安装"><a href="#第二步：编译安装" class="headerlink" title="第二步：编译安装"></a>第二步：编译安装</h2><ul>
+<li><p>将qmake的可执行程序目录（如<code>C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\bin</code>）添加到环境变量。</p>
+</li>
+<li><p>在开始菜单中找到VS2017的菜单目录，找到并打开”适用于VS 2017的x64本机工具命令提示”。</p>
+<img src="/2019/02/28/Qt-MQTT%E6%A8%A1%E5%9D%97%E7%BC%96%E8%AF%91/vs.png" class="" title="CLI">
+</li>
+<li><p>vs命令行工具cd到下载的qtmqtt的源码目录。</p>
+</li>
+<li><p>vs命令行工具依次执行 <code>qmake</code> </p>
+</li>
+<li><p>再执行<code>nmake &amp;&amp; make install</code> 等待完成即可。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>MQTT</tag>
+        <tag>qmake</tag>
+        <tag>Qt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TrueSTUDIO STM32环境搭建</title>
+    <url>/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<p>&copy; 原创内容，转载请注明出处。</p>
+<blockquote>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>操作系统：  Windows10</li>
+<li>芯片类型：  STM32F103ZET6</li>
+<li>环境：      Atollic TrueSTUDIO V9.2.0</li>
+<li>工具：      ST-Link(淘宝十块买的)</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="1、建工程"><a href="#1、建工程" class="headerlink" title="1、建工程"></a>1、建工程</h2><hr>
+<ul>
+<li><p>文件-&gt;新建-&gt;C Project</p>
+  <img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/newproject.jpg" class="" title="新建工程">
+</li>
+<li><p>填上项目名称，选择Embedded C Project</p>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/projecttype.jpg" class="" title="工程类型">
+</li>
+<li><p>选择目标MCU-&gt;下一步-&gt;下一步</p>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/target.jpg" class="" title="目标平台">
+</li>
+<li><p>配置调试器-&gt;完成</p>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/debug.jpg" class="" title="新建工程">
+
+</li>
+</ul>
+<h2 id="2、IDE的小配置"><a href="#2、IDE的小配置" class="headerlink" title="2、IDE的小配置"></a>2、IDE的小配置</h2><hr>
+<ul>
+<li><p>绑定代码补全热键<br>窗口-&gt;首选项-&gt;工作空间-&gt;键-&gt;过滤器输入content<br>绑定content assit</p>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/key.png" class="" title="代码补全">
+
+</li>
+</ul>
+<h2 id="3、使用下载和调试配置"><a href="#3、使用下载和调试配置" class="headerlink" title="3、使用下载和调试配置"></a>3、使用下载和调试配置</h2><hr>
+<p>True STUDO V9.2.0集成了STM32_Programmer_CLI,通过TrueSTUDIO外部工具功能，简单的配置就可以轻松的下载和调试程序。<br>STM32_Programmer_CLI.exe的默认路径是在<br><code>C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.2.0\Servers\STM32CubeProgrammer\bin</code><br>使用命令行打开可以看到使用的规则(支持内容超多)</p>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/cli.png" class="" title="CLI">
+<p>配置到外部工具中我们只用到了其中的几条。下面开始配置。</p>
+<blockquote>
+<h3 id="第一步-复制调试配置"><a href="#第一步-复制调试配置" class="headerlink" title="第一步:复制调试配置"></a>第一步:复制调试配置</h3><ul>
+<li>1、运行-&gt;调试配置-&gt;双击嵌入式C/C++应用展开</li>
+<li>2、右击嵌入式C/C++应用下内容复制出一个新的并重命名</li>
+<li>3、打开启动脚本选项卡</li>
+<li>将load删除或注释掉</li>
+</ul>
+</blockquote>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/debugcfg1.png" class="" title="debugconfig">
+
+<blockquote>
+<h3 id="第二步-创建一个外部工具配置"><a href="#第二步-创建一个外部工具配置" class="headerlink" title="第二步:创建一个外部工具配置"></a>第二步:创建一个外部工具配置</h3><ul>
+<li>1、运行-&gt;外部工具配置</li>
+</ul>
+</blockquote>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/ext.jpg" class="" title="ext_tool">
+
+<blockquote>
+<ul>
+<li>2、新建外部程序并重命名，选择STM32_Programmer_CLI的位置</li>
+</ul>
+</blockquote>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/ext1.png" class="" title="ext_tool">
+<blockquote>
+<ul>
+<li>3、选择工作空间(工程的Debug目录)</li>
+<li>4、输入STM32_Programmer_CLI命令行自变量</li>
+</ul>
+</blockquote>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/ext2.png" class="" title="ext_tool">
+
+<p>至此已经可以下载程序了</p>
+<p>为了方便，我们可以将外部工具添加到启动组</p>
+<blockquote>
+<h3 id="第三步-添加外部工具到启动组"><a href="#第三步-添加外部工具到启动组" class="headerlink" title="第三步:添加外部工具到启动组"></a>第三步:添加外部工具到启动组</h3><ul>
+<li>1、运行-&gt;运行配置</li>
+</ul>
+</blockquote>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/runcfg.jpg" class="" title="runconfig">
+
+<blockquote>
+<ul>
+<li>2、新建配置并重命名-&gt;add-&gt;选择run-&gt;选择刚才建好的外部程序-&gt;选择<code>Wait until Terminated</code>(很重要)</li>
+</ul>
+</blockquote>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/launch.png" class="" title="launch">
+
+<blockquote>
+<ul>
+<li>3、添加调试工具到启动组</li>
+</ul>
+</blockquote>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/launchd.png" class="" title="launchdebug">
+
+<blockquote>
+<h3 id="第四步-功能测试"><a href="#第四步-功能测试" class="headerlink" title="第四步:功能测试"></a>第四步:功能测试</h3><ul>
+<li>1、运行-&gt;运行</li>
+</ul>
+</blockquote>
+<img src="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/info.png" class="" title="info">
+
+<p>Enjoy it!</p>
+<p>参考文档：STM32CubeProgrammer+Atollic TrueSTUDIO for STM32</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>STM32</tag>
+        <tag>TrueSTUDIO</tag>
+        <tag>环境搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图片测试</title>
+    <url>/2019/02/07/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p><img src="1.jpg" alt="生活照"></p>
+<img src="/2019/02/07/%E6%B5%8B%E8%AF%95/1.jpg" class="" title="生活照">]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>照片</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>长恨歌</title>
+    <url>/2018/12/07/test2/</url>
+    <content><![CDATA[<center>唐 · 白居易<center>
+汉皇重色思倾国，御宇多年求不得。  
+杨家有女初长成，养在深闺人未识。  
+天生丽质难自弃，一朝选在君王侧。  
+回眸一笑百媚生，六宫粉黛无颜色。  
+春寒赐浴华清池，温泉水滑洗凝脂。  
+侍儿扶起娇无力，始是新承恩泽时。  
+云鬓花颜金步摇，芙蓉帐暖度春宵。  
+春宵苦短日高起，从此君王不早朝。<a id="more"></a>
+承欢侍宴无闲暇，春从春游夜专夜。  
+后宫佳丽三千人，三千宠爱在一身。  
+金屋妆成娇侍夜，玉楼宴罢醉和春。  
+姊妹弟兄皆列土，可怜光彩生门户。  
+遂令天下父母心，不重生男重生女。  
+骊宫高处入青云，仙乐风飘处处闻。  
+缓歌慢舞凝丝竹，尽日君王看不足。  
+渔阳鼙鼓动地来，惊破霓裳羽衣曲。  
+九重城阙烟尘生，千乘万骑西南行。  
+翠华摇摇行复止，西出都门百余里。  
+六军不发无奈何，宛转蛾眉马前死。  
+花钿委地无人收，翠翘金雀玉搔头。  
+君王掩面救不得，回看血泪相和流。  
+黄埃散漫风萧索，云栈萦纡登剑阁。  
+峨嵋山下少人行，旌旗无光日色薄。  
+蜀江水碧蜀山青，圣主朝朝暮暮情。  
+行宫见月伤心色，夜雨闻铃肠断声。  
+天旋地转回龙驭，到此踌躇不能去。  
+马嵬坡下泥土中，不见玉颜空死处。  
+君臣相顾尽沾衣，东望都门信马归。  
+归来池苑皆依旧，太液芙蓉未央柳。  
+芙蓉如面柳如眉，对此如何不泪垂。  
+春风桃李花开日，秋雨梧桐叶落时。  
+西宫南内多秋草，落叶满阶红不扫。  
+梨园弟子白发新，椒房阿监青娥老。  
+夕殿萤飞思悄然，孤灯挑尽未成眠。  
+迟迟钟鼓初长夜，耿耿星河欲曙天。  
+鸳鸯瓦冷霜华重，翡翠衾寒谁与共。  
+悠悠生死别经年，魂魄不曾来入梦。  
+临邛道士鸿都客，能以精诚致魂魄。  
+为感君王辗转思，遂教方士殷勤觅。  
+排空驭气奔如电，升天入地求之遍。  
+上穷碧落下黄泉，两处茫茫皆不见。  
+忽闻海上有仙山，山在虚无缥渺间。  
+楼阁玲珑五云起，其中绰约多仙子。  
+中有一人字太真，雪肤花貌参差是。  
+金阙西厢叩玉扃，转教小玉报双成。  
+闻道汉家天子使，九华帐里梦魂惊。  
+揽衣推枕起徘徊，珠箔银屏迤逦开。  
+云鬓半偏新睡觉，花冠不整下堂来。  
+风吹仙袂飘飖举，犹似霓裳羽衣舞。  
+玉容寂寞泪阑干，梨花一枝春带雨。  
+含情凝睇谢君王，一别音容两渺茫。  
+昭阳殿里恩爱绝，蓬莱宫中日月长。  
+回头下望人寰处，不见长安见尘雾。  
+惟将旧物表深情，钿合金钗寄将去。  
+钗留一股合一扇，钗擘黄金合分钿。  
+但教心似金钿坚，天上人间会相见。  
+临别殷勤重寄词，词中有誓两心知。  
+七月七日长生殿，夜半无人私语时。  
+在天愿作比翼鸟，在地愿为连理枝。  
+天长地久有时尽，此恨绵绵无绝期。]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>诗歌</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/2018/12/06/test/</url>
+    <content><![CDATA[<p>&copy;</p>
+<h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title="This is an H1"></a>This is an H1</h1><h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title="This is an H2"></a>This is an H2</h2><h1 id="This-is-an-H1-1"><a href="#This-is-an-H1-1" class="headerlink" title="This is an H1"></a>This is an H1</h1><h2 id="This-is-an-H2-1"><a href="#This-is-an-H2-1" class="headerlink" title="This is an H2"></a>This is an H2</h2><h6 id="This-is-an-H6"><a href="#This-is-an-H6" class="headerlink" title="This is an H6"></a>This is an H6</h6><h1 id="This-is-an-H1-2"><a href="#This-is-an-H1-2" class="headerlink" title="This is an H1"></a>This is an H1</h1><h2 id="This-is-an-H2-2"><a href="#This-is-an-H2-2" class="headerlink" title="This is an H2"></a>This is an H2</h2><h3 id="This-is-an-H3"><a href="#This-is-an-H3" class="headerlink" title="This is an H3"></a>This is an H3</h3><blockquote>
+<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
+<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>id sem consectetuer libero luctus adipiscing.</p>
+</blockquote>
+<a id="more"></a>
+
+<blockquote>
+<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
+</blockquote>
+<blockquote>
+<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>id sem consectetuer libero luctus adipiscing.</p>
+</blockquote>
+<blockquote>
+<p>This is the first level of quoting.</p>
+<blockquote>
+<p>This is nested blockquote.</p>
+</blockquote>
+<p>Back to the first level.</p>
+</blockquote>
+<blockquote>
+<h2 id="This-is-a-header"><a href="#This-is-a-header" class="headerlink" title="This is a header."></a>This is a header.</h2><ol>
+<li>This is the first list item.</li>
+<li>This is the second list item.</li>
+</ol>
+<p>Here’s some example code:</p>
+<pre><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);</code></pre></blockquote>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ul>
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
+</ol>
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
+</ol>
+
+
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
+</ol>
+<ul>
+<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br>Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,<br>viverra nec, fringilla in, laoreet vitae, risus.</li>
+<li>Donec sit amet nisl. Aliquam semper ipsum sit amet velit.<br>Suspendisse id sem consectetuer libero luctus adipiscing.</li>
+</ul>
+<p>Use the <code>printf()</code> function.</p>
+<p><code>There is a literal backtick (`) here.</code></p>
+<p>A single backtick in a code span: <code>`</code></p>
+<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
+<p><code>&amp;#8212;</code> is the decimal-encoded equivalent of <code>&amp;mdash;</code>.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">one</span><br><span class="line">two</span><br><span class="line">three</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+</search>
