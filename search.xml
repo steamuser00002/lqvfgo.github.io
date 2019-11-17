@@ -156,8 +156,7 @@
   <entry>
     <title>图片测试</title>
     <url>/2019/02/07/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p><img src="1.jpg" alt="生活照"></p>
-<img src="/2019/02/07/%E6%B5%8B%E8%AF%95/1.jpg" class="" title="生活照">]]></content>
+    <content><![CDATA[<img src="/2019/02/07/%E6%B5%8B%E8%AF%95/1.jpg" class="" title="生活照">]]></content>
       <categories>
         <category>生活</category>
       </categories>
