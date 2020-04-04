@@ -16,7 +16,7 @@
 
 
 <h2 id="第一步：编译安装Nginx"><a href="#第一步：编译安装Nginx" class="headerlink" title="第一步：编译安装Ｎginx"></a>第一步：编译安装Ｎginx</h2><h3 id="1-安装Nginx依赖"><a href="#1-安装Nginx依赖" class="headerlink" title="1.安装Ｎginx依赖"></a>1.安装Ｎginx依赖</h3><ol>
-<li>安装gcc g++的依赖库<br><code>sudo apt install build-essential</code><br><code>sudo apt get install libtool</code></li>
+<li>安装gcc g++的依赖库<br><code>sudo apt install build-essential</code><br><code>sudo apt install libtool</code></li>
 </ol>
 <ol start="2">
 <li><p>安装pcre依赖库<br><code>sudo install libpcre3 libpcre3-dev</code></p>
@@ -55,7 +55,7 @@
 <p>效果  </p>
 <img src="/2020/04/04/deepin%E6%90%AD%E5%BB%BAnginx-rtmp%E6%B5%81%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1%E5%99%A8/effect.png" class="" title="vlc">
 
-<p> 参考文档　<a href="https://blog.csdn.net/CSDN_FlyYoung/article/details/94591864" target="_blank" rel="noopener">https://blog.csdn.net/CSDN_FlyYoung/article/details/94591864</a></p>
+<p>参考文档　<a href="https://blog.csdn.net/CSDN_FlyYoung/article/details/94591864" target="_blank" rel="noopener">https://blog.csdn.net/CSDN_FlyYoung/article/details/94591864</a></p>
 ]]></content>
       <categories>
         <category>编程</category>
