@@ -39,7 +39,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     sidebarPadding: 40
@@ -140,14 +140,49 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -191,10 +226,10 @@
       <div class="post-body">
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-              目前共计 15 个标签
+              目前共计 16 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/GPIO/" style="font-size: 12px; color: #ccc">GPIO</a> <a href="/tags/MQTT/" style="font-size: 12px; color: #ccc">MQTT</a> <a href="/tags/Qt/" style="font-size: 12px; color: #ccc">Qt</a> <a href="/tags/STM32/" style="font-size: 12px; color: #ccc">STM32</a> <a href="/tags/TrueSTUDIO/" style="font-size: 12px; color: #ccc">TrueSTUDIO</a> <a href="/tags/markdown/" style="font-size: 12px; color: #ccc">markdown</a> <a href="/tags/nRF52840%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 12px; color: #ccc">nRF52840学习笔记</a> <a href="/tags/nginx/" style="font-size: 12px; color: #ccc">nginx</a> <a href="/tags/qmake/" style="font-size: 12px; color: #ccc">qmake</a> <a href="/tags/rtmp/" style="font-size: 12px; color: #ccc">rtmp</a> <a href="/tags/%E6%B5%81%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 12px; color: #ccc">流媒体服务器</a> <a href="/tags/%E7%82%B9%E7%81%AF%E5%B7%A5%E7%A8%8B/" style="font-size: 12px; color: #ccc">点灯工程</a> <a href="/tags/%E7%85%A7%E7%89%87/" style="font-size: 12px; color: #ccc">照片</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="font-size: 12px; color: #ccc">环境搭建</a> <a href="/tags/%E8%AF%97%E6%AD%8C/" style="font-size: 12px; color: #ccc">诗歌</a>
+              <a href="/tags/GPIO/" style="font-size: 12px; color: #ccc">GPIO</a> <a href="/tags/MQTT/" style="font-size: 12px; color: #ccc">MQTT</a> <a href="/tags/Qt/" style="font-size: 12px; color: #ccc">Qt</a> <a href="/tags/STM32/" style="font-size: 12px; color: #ccc">STM32</a> <a href="/tags/TrueSTUDIO/" style="font-size: 12px; color: #ccc">TrueSTUDIO</a> <a href="/tags/markdown/" style="font-size: 12px; color: #ccc">markdown</a> <a href="/tags/nRF52840%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 12px; color: #ccc">nRF52840学习笔记</a> <a href="/tags/nginx/" style="font-size: 12px; color: #ccc">nginx</a> <a href="/tags/qmake/" style="font-size: 12px; color: #ccc">qmake</a> <a href="/tags/rtmp/" style="font-size: 12px; color: #ccc">rtmp</a> <a href="/tags/%E6%B5%81%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 12px; color: #ccc">流媒体服务器</a> <a href="/tags/%E7%82%B9%E7%81%AF%E5%B7%A5%E7%A8%8B/" style="font-size: 12px; color: #ccc">点灯工程</a> <a href="/tags/%E7%85%A7%E7%89%87/" style="font-size: 12px; color: #ccc">照片</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="font-size: 12px; color: #ccc">环境搭建</a> <a href="/tags/%E8%93%9D%E7%89%99%E5%A4%96%E8%AE%BE/" style="font-size: 12px; color: #ccc">蓝牙外设</a> <a href="/tags/%E8%AF%97%E6%AD%8C/" style="font-size: 12px; color: #ccc">诗歌</a>
             </div>
           </div>
         
@@ -256,12 +291,14 @@
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
+          
         <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">15</span>
+          
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -335,6 +372,8 @@
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 
