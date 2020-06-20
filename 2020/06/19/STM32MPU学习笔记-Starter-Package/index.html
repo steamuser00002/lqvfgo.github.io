@@ -59,7 +59,7 @@
 <meta property="og:image" content="&#x2F;2020&#x2F;06&#x2F;19&#x2F;STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package&#x2F;cubeprog1.png">
 <meta property="og:image" content="&#x2F;2020&#x2F;06&#x2F;19&#x2F;STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package&#x2F;desktop.png">
 <meta property="og:image" content="&#x2F;2020&#x2F;06&#x2F;19&#x2F;STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package&#x2F;boot-mode.png">
-<meta property="og:updated_time" content="2020-06-19T17:09:03.446Z">
+<meta property="og:updated_time" content="2020-06-20T02:58:25.590Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="&#x2F;2020&#x2F;06&#x2F;19&#x2F;STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package&#x2F;flash.jpg">
 
@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-20 01:09:03" itemprop="dateModified" datetime="2020-06-20T01:09:03+08:00">2020-06-20</time>
+                <time title="修改时间：2020-06-20 10:58:25" itemprop="dateModified" datetime="2020-06-20T10:58:25+08:00">2020-06-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -279,6 +279,9 @@
 <a id="more"></a>
 
 <h2 id="1-下载安装CubeProgrammer"><a href="#1-下载安装CubeProgrammer" class="headerlink" title="1.下载安装CubeProgrammer"></a>1.下载安装CubeProgrammer</h2><p>CubeProgrammer下载地址<a href="https://www.st.com/zh/development-tools/stm32cubeprog.html" target="_blank" rel="noopener">点击此处</a></p>
+<p>CubeProgrammer需要jre才可以运行，如果你不想去oracle官网下<a href="https://pan.baidu.com/s/1jO_4v0YqlxyR18j5aDencg" target="_blank" rel="noopener">点击这个百度网盘链接</a>里面有我下好的，提取码是 <code>h658</code>。</p>
+<p>如果你不想用百度网盘下或许你可以</p>
+<p><code>PC $&gt; sudo apt install default-jre</code></p>
 <h2 id="2-安装libusb"><a href="#2-安装libusb" class="headerlink" title="2.安装libusb"></a>2.安装libusb</h2><p>libusb可以实现用户空间直接和usb设备直接通信。</p>
 <p><code>PC $&gt; sudo apt install libusb-1.0-0</code></p>
 <h2 id="3-拷贝CubeProgrammer安装目录下的STLink规则到-etc-udev-rules-d"><a href="#3-拷贝CubeProgrammer安装目录下的STLink规则到-etc-udev-rules-d" class="headerlink" title="3.拷贝CubeProgrammer安装目录下的STLink规则到/etc/udev/rules.d/"></a>3.拷贝CubeProgrammer安装目录下的STLink规则到/etc/udev/rules.d/</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/*安装目录可能有所不同*/</span><br><span class="line">PC $&gt; cd $HOME/STMicroelectronics/STM32Cube/STM32CubeProgrammer/Drivers/rules</span><br><span class="line">PC $&gt; sudo cp *.* /etc/udev/rules.d/</span><br></pre></td></tr></table></figure>
