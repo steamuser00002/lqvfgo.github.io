@@ -59,7 +59,7 @@
 <meta property="og:image" content="&#x2F;2020&#x2F;06&#x2F;19&#x2F;STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package&#x2F;cubeprog1.png">
 <meta property="og:image" content="&#x2F;2020&#x2F;06&#x2F;19&#x2F;STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package&#x2F;desktop.png">
 <meta property="og:image" content="&#x2F;2020&#x2F;06&#x2F;19&#x2F;STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package&#x2F;boot-mode.png">
-<meta property="og:updated_time" content="2020-06-20T02:58:25.590Z">
+<meta property="og:updated_time" content="2020-06-22T13:56:39.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="&#x2F;2020&#x2F;06&#x2F;19&#x2F;STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package&#x2F;flash.jpg">
 
@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-20 10:58:25" itemprop="dateModified" datetime="2020-06-20T10:58:25+08:00">2020-06-20</time>
+                <time title="修改时间：2020-06-22 21:56:39" itemprop="dateModified" datetime="2020-06-22T21:56:39+08:00">2020-06-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,24 +278,24 @@
 </blockquote>
 <a id="more"></a>
 
-<h2 id="1-下载安装CubeProgrammer"><a href="#1-下载安装CubeProgrammer" class="headerlink" title="1.下载安装CubeProgrammer"></a>1.下载安装CubeProgrammer</h2><p>CubeProgrammer下载地址<a href="https://www.st.com/zh/development-tools/stm32cubeprog.html" target="_blank" rel="noopener">点击此处</a></p>
+<h2 id="下载安装CubeProgrammer"><a href="#下载安装CubeProgrammer" class="headerlink" title="下载安装CubeProgrammer"></a>下载安装CubeProgrammer</h2><p>CubeProgrammer下载地址<a href="https://www.st.com/zh/development-tools/stm32cubeprog.html" target="_blank" rel="noopener">点击此处</a></p>
 <p>CubeProgrammer需要jre才可以运行，如果你不想去oracle官网下<a href="https://pan.baidu.com/s/1jO_4v0YqlxyR18j5aDencg" target="_blank" rel="noopener">点击这个百度网盘链接</a>里面有我下好的，提取码是 <code>h658</code>。</p>
 <p>如果你不想用百度网盘下或许你可以</p>
 <p><code>PC $&gt; sudo apt install default-jre</code></p>
-<h2 id="2-安装libusb"><a href="#2-安装libusb" class="headerlink" title="2.安装libusb"></a>2.安装libusb</h2><p>libusb可以实现用户空间直接和usb设备直接通信。</p>
+<h2 id="安装libusb"><a href="#安装libusb" class="headerlink" title="安装libusb"></a>安装libusb</h2><p>libusb可以实现用户空间直接和usb设备直接通信。</p>
 <p><code>PC $&gt; sudo apt install libusb-1.0-0</code></p>
-<h2 id="3-拷贝CubeProgrammer安装目录下的STLink规则到-etc-udev-rules-d"><a href="#3-拷贝CubeProgrammer安装目录下的STLink规则到-etc-udev-rules-d" class="headerlink" title="3.拷贝CubeProgrammer安装目录下的STLink规则到/etc/udev/rules.d/"></a>3.拷贝CubeProgrammer安装目录下的STLink规则到/etc/udev/rules.d/</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/*安装目录可能有所不同*/</span><br><span class="line">PC $&gt; cd $HOME/STMicroelectronics/STM32Cube/STM32CubeProgrammer/Drivers/rules</span><br><span class="line">PC $&gt; sudo cp *.* /etc/udev/rules.d/</span><br></pre></td></tr></table></figure>
+<h2 id="拷贝CubeProgrammer安装目录下的STLink规则到-etc-udev-rules-d"><a href="#拷贝CubeProgrammer安装目录下的STLink规则到-etc-udev-rules-d" class="headerlink" title="拷贝CubeProgrammer安装目录下的STLink规则到/etc/udev/rules.d/"></a>拷贝CubeProgrammer安装目录下的STLink规则到/etc/udev/rules.d/</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/*安装目录可能有所不同*/</span><br><span class="line">PC $&gt; cd $HOME/STMicroelectronics/STM32Cube/STM32CubeProgrammer/Drivers/rules</span><br><span class="line">PC $&gt; sudo cp *.* /etc/udev/rules.d/</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-创建一个workspace"><a href="#4-创建一个workspace" class="headerlink" title="4. 创建一个workspace"></a>4. 创建一个workspace</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PC $&gt; mkdir $HOME/STM32MPU_workspace/STM32MP15-Ecosystem-v1.2.0</span><br><span class="line">PC $&gt; mkdir $HOME/STM32MPU_workspace/STM32MP15-Ecosystem-v1.2.0/Starter-Package</span><br><span class="line">PC $&gt; cd $HOME/STM32MPU_workspace/STM32MP15-Ecosystem-v1.2.0/Starter-Package</span><br></pre></td></tr></table></figure>
+<h2 id="创建一个workspace"><a href="#创建一个workspace" class="headerlink" title="创建一个workspace"></a>创建一个workspace</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PC $&gt; mkdir $HOME/STM32MPU_workspace/STM32MP15-Ecosystem-v1.2.0</span><br><span class="line">PC $&gt; mkdir $HOME/STM32MPU_workspace/STM32MP15-Ecosystem-v1.2.0/Starter-Package</span><br><span class="line">PC $&gt; cd $HOME/STM32MPU_workspace/STM32MP15-Ecosystem-v1.2.0/Starter-Package</span><br></pre></td></tr></table></figure>
 
-<h2 id="5-下载官方的Starter-Package"><a href="#5-下载官方的Starter-Package" class="headerlink" title="5. 下载官方的Starter-Package"></a>5. 下载官方的Starter-Package</h2><p>Starter-Package下载地址<a href="https://www.st.com/content/ccc/resource/technical/software/firmware/group0/21/4c/cd/61/9e/dd/45/5e/STM32MP15_OpenSTLinux_Starter_Package/files/FLASH-stm32mp1-openstlinux-20-02-19.tar.xz/jcr:content/translations/en.FLASH-stm32mp1-openstlinux-20-02-19.tar.xz" target="_blank" rel="noopener">点击此处</a></p>
-<h2 id="6-解压"><a href="#6-解压" class="headerlink" title="6. 解压"></a>6. 解压</h2><p><code>tar xvf en.FLASH-stm32mp1-openstlinux-20-02-19.tar.xz</code></p>
-<h2 id="7-开发板连接"><a href="#7-开发板连接" class="headerlink" title="7. 开发板连接"></a>7. 开发板连接</h2><p>TypeC PWR： 电源适配器，推荐DC 5V-3A</p>
+<h2 id="下载官方的Starter-Package"><a href="#下载官方的Starter-Package" class="headerlink" title="下载官方的Starter-Package"></a>下载官方的Starter-Package</h2><p>Starter-Package下载地址<a href="https://www.st.com/content/ccc/resource/technical/software/firmware/group0/21/4c/cd/61/9e/dd/45/5e/STM32MP15_OpenSTLinux_Starter_Package/files/FLASH-stm32mp1-openstlinux-20-02-19.tar.xz/jcr:content/translations/en.FLASH-stm32mp1-openstlinux-20-02-19.tar.xz" target="_blank" rel="noopener">点击此处</a></p>
+<h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><p><code>tar xvf en.FLASH-stm32mp1-openstlinux-20-02-19.tar.xz</code></p>
+<h2 id="开发板连接"><a href="#开发板连接" class="headerlink" title="开发板连接"></a>开发板连接</h2><p>TypeC PWR： 电源适配器，推荐DC 5V-3A</p>
 <p>TypeC USB： 用于USB DFU，虚拟网口</p>
 <p>Micro USB: stlink,用于调试，虚拟串口</p>
-<h2 id="8-将开发板后面的拨码开关拨到BOOT0-BOOT2"><a href="#8-将开发板后面的拨码开关拨到BOOT0-BOOT2" class="headerlink" title="8. 将开发板后面的拨码开关拨到BOOT0 BOOT2"></a>8. 将开发板后面的拨码开关拨到BOOT0 BOOT2</h2><img src="/2020/06/19/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package/flash.jpg" class="" title="DFU模式">
+<h2 id="将开发板后面的拨码开关拨到BOOT0-BOOT2"><a href="#将开发板后面的拨码开关拨到BOOT0-BOOT2" class="headerlink" title="将开发板后面的拨码开关拨到BOOT0 BOOT2"></a>将开发板后面的拨码开关拨到BOOT0 BOOT2</h2><img src="/2020/06/19/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package/flash.jpg" class="" title="DFU模式">
 
-<h2 id="9-打开CubeProgrammer写入镜像"><a href="#9-打开CubeProgrammer写入镜像" class="headerlink" title="9. 打开CubeProgrammer写入镜像"></a>9. 打开CubeProgrammer写入镜像</h2><ul>
+<h2 id="打开CubeProgrammer写入镜像"><a href="#打开CubeProgrammer写入镜像" class="headerlink" title="打开CubeProgrammer写入镜像"></a>打开CubeProgrammer写入镜像</h2><ul>
 <li>连接USB，如果PORT没有显示可用的USB，检查拨码开关的位置对不对，如果位置正确重启开发板。</li>
 </ul>
 <img src="/2020/06/19/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package/cubeprog.png" class="" title="连接设备">
@@ -311,14 +311,14 @@
 <img src="/2020/06/19/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package/cubeprog1.png" class="" title="下载">
 
 
-<h2 id="10-完成后将拨码开关拨到ON"><a href="#10-完成后将拨码开关拨到ON" class="headerlink" title="10. 完成后将拨码开关拨到ON"></a>10. 完成后将拨码开关拨到ON</h2>
+<h2 id="完成后将拨码开关拨到ON"><a href="#完成后将拨码开关拨到ON" class="headerlink" title="完成后将拨码开关拨到ON"></a>完成后将拨码开关拨到ON</h2>
 
 <p>重启开发版</p>
-<h2 id="11-安装串口终端程序"><a href="#11-安装串口终端程序" class="headerlink" title="11.安装串口终端程序"></a>11.安装串口终端程序</h2><p>推荐picocom,好用。</p>
+<h2 id="安装串口终端程序"><a href="#安装串口终端程序" class="headerlink" title="安装串口终端程序"></a>安装串口终端程序</h2><p>推荐picocom,好用。</p>
 <p><code>sudo apt install picocom</code></p>
-<h2 id="12-打开串口终端"><a href="#12-打开串口终端" class="headerlink" title="12. 打开串口终端"></a>12. 打开串口终端</h2><p><code>picocom -b 115200 /dev/ttyACM0</code></p>
+<h2 id="打开串口终端"><a href="#打开串口终端" class="headerlink" title="打开串口终端"></a>打开串口终端</h2><p><code>picocom -b 115200 /dev/ttyACM0</code></p>
 <p>现在你可以通过串口终端操作你的MPU开发板了</p>
-<h2 id="13-使用HDMI连接显示器，桌面效果如下"><a href="#13-使用HDMI连接显示器，桌面效果如下" class="headerlink" title="13.使用HDMI连接显示器，桌面效果如下"></a>13.使用HDMI连接显示器，桌面效果如下</h2><img src="/2020/06/19/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package/desktop.png" class="" title="桌面">
+<h2 id="使用HDMI连接显示器，桌面效果如下"><a href="#使用HDMI连接显示器，桌面效果如下" class="headerlink" title="使用HDMI连接显示器，桌面效果如下"></a>使用HDMI连接显示器，桌面效果如下</h2><img src="/2020/06/19/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Starter-Package/desktop.png" class="" title="桌面">
 
 <p>插上鼠标键盘就可以操作ST提供的示例程序了。</p>
 <h2 id="NOTE"><a href="#NOTE" class="headerlink" title="NOTE"></a>NOTE</h2><ol>
@@ -398,7 +398,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-下载安装CubeProgrammer"><span class="nav-number">2.</span> <span class="nav-text">1.下载安装CubeProgrammer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装libusb"><span class="nav-number">3.</span> <span class="nav-text">2.安装libusb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-拷贝CubeProgrammer安装目录下的STLink规则到-etc-udev-rules-d"><span class="nav-number">4.</span> <span class="nav-text">3.拷贝CubeProgrammer安装目录下的STLink规则到/etc/udev/rules.d/</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-创建一个workspace"><span class="nav-number">5.</span> <span class="nav-text">4. 创建一个workspace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-下载官方的Starter-Package"><span class="nav-number">6.</span> <span class="nav-text">5. 下载官方的Starter-Package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-解压"><span class="nav-number">7.</span> <span class="nav-text">6. 解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-开发板连接"><span class="nav-number">8.</span> <span class="nav-text">7. 开发板连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-将开发板后面的拨码开关拨到BOOT0-BOOT2"><span class="nav-number">9.</span> <span class="nav-text">8. 将开发板后面的拨码开关拨到BOOT0 BOOT2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-打开CubeProgrammer写入镜像"><span class="nav-number">10.</span> <span class="nav-text">9. 打开CubeProgrammer写入镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-完成后将拨码开关拨到ON"><span class="nav-number">11.</span> <span class="nav-text">10. 完成后将拨码开关拨到ON</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-安装串口终端程序"><span class="nav-number">12.</span> <span class="nav-text">11.安装串口终端程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-打开串口终端"><span class="nav-number">13.</span> <span class="nav-text">12. 打开串口终端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-使用HDMI连接显示器，桌面效果如下"><span class="nav-number">14.</span> <span class="nav-text">13.使用HDMI连接显示器，桌面效果如下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOTE"><span class="nav-number">15.</span> <span class="nav-text">NOTE</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载安装CubeProgrammer"><span class="nav-number">2.</span> <span class="nav-text">下载安装CubeProgrammer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装libusb"><span class="nav-number">3.</span> <span class="nav-text">安装libusb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拷贝CubeProgrammer安装目录下的STLink规则到-etc-udev-rules-d"><span class="nav-number">4.</span> <span class="nav-text">拷贝CubeProgrammer安装目录下的STLink规则到/etc/udev/rules.d/</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个workspace"><span class="nav-number">5.</span> <span class="nav-text">创建一个workspace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载官方的Starter-Package"><span class="nav-number">6.</span> <span class="nav-text">下载官方的Starter-Package</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压"><span class="nav-number">7.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发板连接"><span class="nav-number">8.</span> <span class="nav-text">开发板连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将开发板后面的拨码开关拨到BOOT0-BOOT2"><span class="nav-number">9.</span> <span class="nav-text">将开发板后面的拨码开关拨到BOOT0 BOOT2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开CubeProgrammer写入镜像"><span class="nav-number">10.</span> <span class="nav-text">打开CubeProgrammer写入镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完成后将拨码开关拨到ON"><span class="nav-number">11.</span> <span class="nav-text">完成后将拨码开关拨到ON</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装串口终端程序"><span class="nav-number">12.</span> <span class="nav-text">安装串口终端程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开串口终端"><span class="nav-number">13.</span> <span class="nav-text">打开串口终端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用HDMI连接显示器，桌面效果如下"><span class="nav-number">14.</span> <span class="nav-text">使用HDMI连接显示器，桌面效果如下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOTE"><span class="nav-number">15.</span> <span class="nav-text">NOTE</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
