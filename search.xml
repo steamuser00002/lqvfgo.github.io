@@ -71,17 +71,6 @@
       </tags>
   </entry>
   <entry>
-    <title>图片测试</title>
-    <url>/2019/02/07/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<img src="/2019/02/07/%E6%B5%8B%E8%AF%95/1.jpg" class="" title="生活照">]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>照片</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>长恨歌</title>
     <url>/2018/12/07/test2/</url>
     <content><![CDATA[<center>唐 · 白居易<center>
@@ -93,6 +82,17 @@
       </categories>
       <tags>
         <tag>诗歌</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图片测试</title>
+    <url>/2019/02/07/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<img src="/2019/02/07/%E6%B5%8B%E8%AF%95/1.jpg" class="" title="生活照">]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>照片</tag>
       </tags>
   </entry>
   <entry>
@@ -246,6 +246,139 @@
         <tag>MQTT</tag>
         <tag>qmake</tag>
         <tag>Qt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nRF52840点灯工程师已上线</title>
+    <url>/2020/05/06/nRF52840%E7%82%B9%E7%81%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%B7%B2%E4%B8%8A%E7%BA%BF/</url>
+    <content><![CDATA[<p>&copy; 原创内容，转载请注明出处。</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>开发环境 MDK5</li>
+<li>SDK nRF5_SDK_15.0.0_a53641a</li>
+<li>功能 点亮LED<a id="more"></a>
+
+</li>
+</ul>
+<h2 id="1-GPIO相关寄存器"><a href="#1-GPIO相关寄存器" class="headerlink" title="1. GPIO相关寄存器"></a>1. GPIO相关寄存器</h2><table>
+<thead>
+<tr>
+<th align="center">寄存器名称</th>
+<th align="center">R/W</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">OUT</td>
+<td align="center">R/W</td>
+<td align="center">设置端口输出</td>
+</tr>
+<tr>
+<td align="center">OUTSET</td>
+<td align="center">R/W</td>
+<td align="center">置位端口输出高，置零无效</td>
+</tr>
+<tr>
+<td align="center">OUTCLR</td>
+<td align="center">R/W</td>
+<td align="center">置位端口输出低，置零无效</td>
+</tr>
+<tr>
+<td align="center">IN</td>
+<td align="center">R</td>
+<td align="center">设置端口输入</td>
+</tr>
+<tr>
+<td align="center">DIR</td>
+<td align="center">R/W</td>
+<td align="center">设置端口方向</td>
+</tr>
+<tr>
+<td align="center">DIRSET</td>
+<td align="center">R/W</td>
+<td align="center">置位端口为输入，置零无效</td>
+</tr>
+<tr>
+<td align="center">DIRCLR</td>
+<td align="center">R/W</td>
+<td align="center">置位端口为输出，置零无效</td>
+</tr>
+<tr>
+<td align="center">LATCH</td>
+<td align="center">R/W</td>
+<td align="center">传感锁存寄存器，用于指示符合PIN_CNF[n].SENSE寄存器中设置的条件</td>
+</tr>
+<tr>
+<td align="center">DETECTMODE</td>
+<td align="center">R/W</td>
+<td align="center">传感模式选择，选择直接感应模式还是锁存感应模式</td>
+</tr>
+<tr>
+<td align="center">PIN_CNF[n]</td>
+<td align="center">R/W</td>
+<td align="center">管脚配置寄存器</td>
+</tr>
+</tbody></table>
+<p>管脚配置寄存器（PIN_CNF[n]）</p>
+<table>
+<thead>
+<tr>
+<th align="center">位</th>
+<th align="center">域</th>
+<th align="center">R/W</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">DIR</td>
+<td align="center">R/W</td>
+<td align="center">管脚方向</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">INPUT</td>
+<td align="center">R/W</td>
+<td align="center">连接或断开输入缓冲</td>
+</tr>
+<tr>
+<td align="center">2-3</td>
+<td align="center">PULL</td>
+<td align="center">R/W</td>
+<td align="center">内部拉电阻设置</td>
+</tr>
+<tr>
+<td align="center">8-10</td>
+<td align="center">DRIVE</td>
+<td align="center">R/W</td>
+<td align="center">驱动强度设置</td>
+</tr>
+<tr>
+<td align="center">16-17</td>
+<td align="center">SENSE</td>
+<td align="center">R/W</td>
+<td align="center">感用设置</td>
+</tr>
+</tbody></table>
+<h2 id="2-GPIO组件库要包含的头文件"><a href="#2-GPIO组件库要包含的头文件" class="headerlink" title="2. GPIO组件库要包含的头文件"></a>2. GPIO组件库要包含的头文件</h2><p><code>#include &quot;nrf_gpio.h&quot;</code></p>
+<h2 id="3-GPIO的基本操作"><a href="#3-GPIO的基本操作" class="headerlink" title="3. GPIO的基本操作"></a>3. GPIO的基本操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//输出模式设置</span><br><span class="line">__STATIC_INLINE void nrf_gpio_cfg_output(uint32_t pin_number);</span><br><span class="line">//输入模式设置</span><br><span class="line">__STATIC_INLINE void nrf_gpio_cfg_input(uint32_t pin_number, nrf_gpio_pin_pull_t pull_config);</span><br><span class="line">//引脚置高</span><br><span class="line">__STATIC_INLINE void nrf_gpio_pin_set(uint32_t pin_number);</span><br><span class="line">//引脚置低</span><br><span class="line">__STATIC_INLINE void nrf_gpio_pin_clear(uint32_t pin_number);</span><br><span class="line">//引脚电平翻转</span><br><span class="line">__STATIC_INLINE void nrf_gpio_pin_toggle(uint32_t pin_number);</span><br><span class="line">//引脚电平读取</span><br><span class="line">__STATIC_INLINE uint32_t nrf_gpio_pin_read(uint32_t pin_number);</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-点亮一个LED"><a href="#4-点亮一个LED" class="headerlink" title="4. 点亮一个LED"></a>4. 点亮一个LED</h2><p>LED驱动函数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void LED_Init(void)</span><br><span class="line">&#123;</span><br><span class="line">	nrf_gpio_cfg_output(LED_0);     //初始化为输出</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LED0_Open(void)</span><br><span class="line">&#123;</span><br><span class="line">	nrf_gpio_pin_clear(LED_0);      //置低</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LED0_Close(void)</span><br><span class="line">&#123;</span><br><span class="line">	nrf_gpio_pin_set(LED_0);        //置高</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LED0_Toggle(void)</span><br><span class="line">&#123;</span><br><span class="line">	nrf_gpio_pin_toggle(LED_0);     //翻转</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>主函数，添加使LED闪烁</p>
+<p><code>#include &quot;nrf_delay.h&quot;</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	LED_Init();</span><br><span class="line">	while(true)</span><br><span class="line">	&#123;</span><br><span class="line">	</span><br><span class="line">		LED0_Close();</span><br><span class="line">		nrf_delay_ms(200);</span><br><span class="line">		LED0_Open();</span><br><span class="line">		nrf_delay_ms(200);</span><br><span class="line">        LED0_Toggle();</span><br><span class="line">        nrf_delay_ms(200);</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>点灯工程完成</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>nRF52840学习笔记</tag>
+        <tag>蓝牙外设</tag>
+        <tag>GPIO</tag>
+        <tag>点灯工程</tag>
       </tags>
   </entry>
   <entry>
@@ -461,139 +594,6 @@
       </tags>
   </entry>
   <entry>
-    <title>nRF52840点灯工程师已上线</title>
-    <url>/2020/05/06/nRF52840%E7%82%B9%E7%81%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%B7%B2%E4%B8%8A%E7%BA%BF/</url>
-    <content><![CDATA[<p>&copy; 原创内容，转载请注明出处。</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
-<li>开发环境 MDK5</li>
-<li>SDK nRF5_SDK_15.0.0_a53641a</li>
-<li>功能 点亮LED<a id="more"></a>
-
-</li>
-</ul>
-<h2 id="1-GPIO相关寄存器"><a href="#1-GPIO相关寄存器" class="headerlink" title="1. GPIO相关寄存器"></a>1. GPIO相关寄存器</h2><table>
-<thead>
-<tr>
-<th align="center">寄存器名称</th>
-<th align="center">R/W</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">OUT</td>
-<td align="center">R/W</td>
-<td align="center">设置端口输出</td>
-</tr>
-<tr>
-<td align="center">OUTSET</td>
-<td align="center">R/W</td>
-<td align="center">置位端口输出高，置零无效</td>
-</tr>
-<tr>
-<td align="center">OUTCLR</td>
-<td align="center">R/W</td>
-<td align="center">置位端口输出低，置零无效</td>
-</tr>
-<tr>
-<td align="center">IN</td>
-<td align="center">R</td>
-<td align="center">设置端口输入</td>
-</tr>
-<tr>
-<td align="center">DIR</td>
-<td align="center">R/W</td>
-<td align="center">设置端口方向</td>
-</tr>
-<tr>
-<td align="center">DIRSET</td>
-<td align="center">R/W</td>
-<td align="center">置位端口为输入，置零无效</td>
-</tr>
-<tr>
-<td align="center">DIRCLR</td>
-<td align="center">R/W</td>
-<td align="center">置位端口为输出，置零无效</td>
-</tr>
-<tr>
-<td align="center">LATCH</td>
-<td align="center">R/W</td>
-<td align="center">传感锁存寄存器，用于指示符合PIN_CNF[n].SENSE寄存器中设置的条件</td>
-</tr>
-<tr>
-<td align="center">DETECTMODE</td>
-<td align="center">R/W</td>
-<td align="center">传感模式选择，选择直接感应模式还是锁存感应模式</td>
-</tr>
-<tr>
-<td align="center">PIN_CNF[n]</td>
-<td align="center">R/W</td>
-<td align="center">管脚配置寄存器</td>
-</tr>
-</tbody></table>
-<p>管脚配置寄存器（PIN_CNF[n]）</p>
-<table>
-<thead>
-<tr>
-<th align="center">位</th>
-<th align="center">域</th>
-<th align="center">R/W</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">0</td>
-<td align="center">DIR</td>
-<td align="center">R/W</td>
-<td align="center">管脚方向</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">INPUT</td>
-<td align="center">R/W</td>
-<td align="center">连接或断开输入缓冲</td>
-</tr>
-<tr>
-<td align="center">2-3</td>
-<td align="center">PULL</td>
-<td align="center">R/W</td>
-<td align="center">内部拉电阻设置</td>
-</tr>
-<tr>
-<td align="center">8-10</td>
-<td align="center">DRIVE</td>
-<td align="center">R/W</td>
-<td align="center">驱动强度设置</td>
-</tr>
-<tr>
-<td align="center">16-17</td>
-<td align="center">SENSE</td>
-<td align="center">R/W</td>
-<td align="center">感用设置</td>
-</tr>
-</tbody></table>
-<h2 id="2-GPIO组件库要包含的头文件"><a href="#2-GPIO组件库要包含的头文件" class="headerlink" title="2. GPIO组件库要包含的头文件"></a>2. GPIO组件库要包含的头文件</h2><p><code>#include &quot;nrf_gpio.h&quot;</code></p>
-<h2 id="3-GPIO的基本操作"><a href="#3-GPIO的基本操作" class="headerlink" title="3. GPIO的基本操作"></a>3. GPIO的基本操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//输出模式设置</span><br><span class="line">__STATIC_INLINE void nrf_gpio_cfg_output(uint32_t pin_number);</span><br><span class="line">//输入模式设置</span><br><span class="line">__STATIC_INLINE void nrf_gpio_cfg_input(uint32_t pin_number, nrf_gpio_pin_pull_t pull_config);</span><br><span class="line">//引脚置高</span><br><span class="line">__STATIC_INLINE void nrf_gpio_pin_set(uint32_t pin_number);</span><br><span class="line">//引脚置低</span><br><span class="line">__STATIC_INLINE void nrf_gpio_pin_clear(uint32_t pin_number);</span><br><span class="line">//引脚电平翻转</span><br><span class="line">__STATIC_INLINE void nrf_gpio_pin_toggle(uint32_t pin_number);</span><br><span class="line">//引脚电平读取</span><br><span class="line">__STATIC_INLINE uint32_t nrf_gpio_pin_read(uint32_t pin_number);</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-点亮一个LED"><a href="#4-点亮一个LED" class="headerlink" title="4. 点亮一个LED"></a>4. 点亮一个LED</h2><p>LED驱动函数</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void LED_Init(void)</span><br><span class="line">&#123;</span><br><span class="line">	nrf_gpio_cfg_output(LED_0);     //初始化为输出</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LED0_Open(void)</span><br><span class="line">&#123;</span><br><span class="line">	nrf_gpio_pin_clear(LED_0);      //置低</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LED0_Close(void)</span><br><span class="line">&#123;</span><br><span class="line">	nrf_gpio_pin_set(LED_0);        //置高</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LED0_Toggle(void)</span><br><span class="line">&#123;</span><br><span class="line">	nrf_gpio_pin_toggle(LED_0);     //翻转</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>主函数，添加使LED闪烁</p>
-<p><code>#include &quot;nrf_delay.h&quot;</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	LED_Init();</span><br><span class="line">	while(true)</span><br><span class="line">	&#123;</span><br><span class="line">	</span><br><span class="line">		LED0_Close();</span><br><span class="line">		nrf_delay_ms(200);</span><br><span class="line">		LED0_Open();</span><br><span class="line">		nrf_delay_ms(200);</span><br><span class="line">        LED0_Toggle();</span><br><span class="line">        nrf_delay_ms(200);</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>点灯工程完成</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>nRF52840学习笔记</tag>
-        <tag>蓝牙外设</tag>
-        <tag>GPIO</tag>
-        <tag>点灯工程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>STM32MPU学习笔记-构建Distribution-Package</title>
     <url>/2020/09/12/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9E%84%E5%BB%BADistribution-Package/</url>
     <content><![CDATA[<p>&copy; 原创内容，转载请注明出处。</p>
@@ -618,6 +618,7 @@
 
 <h2 id="创建用于生成Distribution-Package的文件夹"><a href="#创建用于生成Distribution-Package的文件夹" class="headerlink" title="创建用于生成Distribution-Package的文件夹"></a>创建用于生成Distribution-Package的文件夹</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PC $&gt; mkdir Distribution-Package</span><br><span class="line"></span><br><span class="line">PC $&gt; cd Distribution-Package</span><br><span class="line"></span><br><span class="line">PC $&gt; mkdir openstlinux-20-02-19 </span><br><span class="line"></span><br><span class="line">PC $&gt; cd openstlinux-20-02-19</span><br></pre></td></tr></table></figure>
 
+<p>4.由于deepin使用的工具链比较老，如果看到python版本太旧的警告可以参考<a href="https://mp.weixin.qq.com/s?__biz=MzA5NzE0Mjg4Ng==&mid=2650419545&idx=1&sn=c84c53962066526ef8dc79e96efbdeff&chksm=88abc050bfdc494648a659200fa0df0b80078ac403f541b61342f571a1bdb519e99be9fe008f&token=389882134&lang=zh_CN#rd" target="_blank" rel="noopener">编译安装python</a>自行编译安装新版本Python</p>
 <h2 id="测试连接"><a href="#测试连接" class="headerlink" title="测试连接"></a>测试连接</h2><p>后面的很多步骤是需要外网的，检查一下你是否能访问到外网，如果不能请设置代理。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PC $&gt; wget -q www.google.com &amp;&amp; echo &quot;Internet access over HTTP/HTTPS is OK !&quot; || echo &quot;No internet access over HTTP/HTTPS ! You may need to set up a proxy.&quot;</span><br></pre></td></tr></table></figure>
 
@@ -639,6 +640,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DISTRO=openstlinux-weston MACHINE=stm32mp1 source layers/meta-st/scripts/envsetup.sh</span><br></pre></td></tr></table></figure>
 <h3 id="生成weston镜像"><a href="#生成weston镜像" class="headerlink" title="生成weston镜像"></a>生成weston镜像</h3><p>生成镜像的时间取决于你的网络情况和你的电脑配置，建议使用多核处理器8G及以上内存以及SSD。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bitbake st-image-weston</span><br></pre></td></tr></table></figure>
+
 
 <p>生成的镜像位于</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">STM32MPU_workspace/Distribution-Package/openstlinux-20-02-19/build-openstlinuxweston-stm32mp1/tmp-glibc/deploy/images/stm32mp1</span><br></pre></td></tr></table></figure>
