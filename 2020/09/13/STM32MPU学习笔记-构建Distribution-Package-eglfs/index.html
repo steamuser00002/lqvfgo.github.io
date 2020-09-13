@@ -47,14 +47,14 @@
 </script>
 
   <meta name="description" content="&amp;copy; 原创内容，转载请注明出处。 说明  操作系统：  Deepin Linux15.11 桌面版 开发板：    STM32MP157A-DK1 SDK版本： v1.2.0 PC $&amp;gt;  表示在PC机上执行的命令行 Board $&amp;gt;  表示在开发板上执行的命令行">
-<meta name="keywords" content="STM32MPU学习笔记,Linux,EGLFS,Distribution-Package">
+<meta name="keywords" content="STM32MPU学习笔记,Linux,Distribution-Package,EGLFS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="STM32MPU学习笔记-构建Distribution-Package-eglfs">
 <meta property="og:url" content="armbug.com&#x2F;2020&#x2F;09&#x2F;13&#x2F;STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9E%84%E5%BB%BADistribution-Package-eglfs&#x2F;index.html">
 <meta property="og:site_name" content="我是一个酸菜鱼的博客">
 <meta property="og:description" content="&amp;copy; 原创内容，转载请注明出处。 说明  操作系统：  Deepin Linux15.11 桌面版 开发板：    STM32MP157A-DK1 SDK版本： v1.2.0 PC $&amp;gt;  表示在PC机上执行的命令行 Board $&amp;gt;  表示在开发板上执行的命令行">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-13T05:42:27.826Z">
+<meta property="og:updated_time" content="2020-09-13T08:03:54.370Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="armbug.com/2020/09/13/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9E%84%E5%BB%BADistribution-Package-eglfs/">
@@ -230,7 +230,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-13 12:36:59 / 修改时间：13:42:27" itemprop="dateCreated datePublished" datetime="2020-09-13T12:36:59+08:00">2020-09-13</time>
+              <time title="创建时间：2020-09-13 12:36:59 / 修改时间：16:03:54" itemprop="dateCreated datePublished" datetime="2020-09-13T12:36:59+08:00">2020-09-13</time>
             </span>
 
           
@@ -272,7 +272,7 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PC $&gt; mkdir Distribution-Package</span><br><span class="line"></span><br><span class="line">PC $&gt; cd Distribution-Package</span><br><span class="line"></span><br><span class="line">PC $&gt; mkdir openstlinux-20-02-19 </span><br><span class="line"></span><br><span class="line">PC $&gt; cd openstlinux-20-02-19</span><br></pre></td></tr></table></figure>
 
-<h2 id="测试连接"><a href="#测试连接" class="headerlink" title="测试连接"></a>测试连接</h2><p>后面的很多步骤是需要外网的，检查一下你是否能访问到外网，如果不能请设置代理。</p>
+<h2 id="测试连接"><a href="#测试连接" class="headerlink" title="测试连接"></a>测试连接</h2><p>检查一下你是否能访问到外网，如果不能请设置代理。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PC $&gt; wget -q www.google.com &amp;&amp; echo &quot;Internet access over HTTP/HTTPS is OK !&quot; || echo &quot;No internet access over HTTP/HTTPS ! You may need to set up a proxy.&quot;</span><br></pre></td></tr></table></figure>
 
 <p>设置代理</p>
@@ -342,8 +342,8 @@
           <div class="post-tags">
               <a href="/tags/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># STM32MPU学习笔记</a>
               <a href="/tags/Linux/" rel="tag"># Linux</a>
-              <a href="/tags/EGLFS/" rel="tag"># EGLFS</a>
               <a href="/tags/Distribution-Package/" rel="tag"># Distribution-Package</a>
+              <a href="/tags/EGLFS/" rel="tag"># EGLFS</a>
           </div>
 
         
@@ -358,6 +358,9 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+                <a href="/2020/09/13/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%94%9F%E6%88%90QtSDK%E5%B9%B6%E9%85%8D%E7%BD%AEQtCreator/" rel="prev" title="STM32MPU学习笔记-生成QtSDK并配置QtCreator">
+                  STM32MPU学习笔记-生成QtSDK并配置QtCreator <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
       </footer>
@@ -410,7 +413,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
