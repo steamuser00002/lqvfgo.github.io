@@ -204,6 +204,91 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="armbug.com/2020/09/26/%E8%B7%A8%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7deepin15-11%E5%88%B0deepinv20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="我是一个酸菜鱼">
+      <meta itemprop="description" content="点灯工程师">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我是一个酸菜鱼的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/26/%E8%B7%A8%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7deepin15-11%E5%88%B0deepinv20/" class="post-title-link" itemprop="url">跨版本升级deepin15.11到deepinv20</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-09-26 17:56:29 / 修改时间：18:01:43" itemprop="dateCreated datePublished" datetime="2020-09-26T17:56:29+08:00">2020-09-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>将15.11官方源替换成20官方源（/etc/apt/sources.list）</li>
+</ol>
+<p><code>deb [by-hash=force] https://community-packages.deepin.com/deepin/ apricot main contrib non-free</code></p>
+<ol start="2">
+<li>新增20官方商店源（/etc/apt/sources.list.d/appstore.list ），无list文件创建后添加：</li>
+</ol>
+<p><code>deb https://community-store-packages.deepin.com/appstore eagle appstore</code></p>
+<ol start="3">
+<li>命令行更新</li>
+</ol>
+<p><code>sudo apt-get update -y &amp;&amp; sudo apt-get upgrade -y</code></p>
+<ol start="4">
+<li>重启执行</li>
+</ol>
+<p><code>sudo apt-get update -y &amp;&amp; sudo apt-get upgrade -y</code></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="armbug.com/2020/09/13/STM32MPU%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%94%9F%E6%88%90QtSDK%E5%B9%B6%E9%85%8D%E7%BD%AEQtCreator/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -227,9 +312,26 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-09-13 15:50:13 / 修改时间：17:01:09" itemprop="dateCreated datePublished" datetime="2020-09-13T15:50:13+08:00">2020-09-13</time>
+              <time title="创建时间：2020-09-13 15:50:13" itemprop="dateCreated datePublished" datetime="2020-09-13T15:50:13+08:00">2020-09-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-26 17:58:19" itemprop="dateModified" datetime="2020-09-26T17:58:19+08:00">2020-09-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
             </span>
 
           
@@ -303,9 +405,26 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-09-13 12:36:59 / 修改时间：16:03:54" itemprop="dateCreated datePublished" datetime="2020-09-13T12:36:59+08:00">2020-09-13</time>
+              <time title="创建时间：2020-09-13 12:36:59" itemprop="dateCreated datePublished" datetime="2020-09-13T12:36:59+08:00">2020-09-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-26 17:58:15" itemprop="dateModified" datetime="2020-09-26T17:58:15+08:00">2020-09-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
             </span>
 
           
@@ -386,8 +505,19 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-13 13:26:37" itemprop="dateModified" datetime="2020-09-13T13:26:37+08:00">2020-09-13</time>
+                <time title="修改时间：2020-09-26 17:58:05" itemprop="dateModified" datetime="2020-09-26T17:58:05+08:00">2020-09-26</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+            </span>
 
           
 
@@ -467,8 +597,19 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-22 21:55:36" itemprop="dateModified" datetime="2020-06-22T21:55:36+08:00">2020-06-22</time>
+                <time title="修改时间：2020-09-26 17:57:55" itemprop="dateModified" datetime="2020-09-26T17:57:55+08:00">2020-09-26</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+            </span>
 
           
 
@@ -548,7 +689,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-22 21:56:39" itemprop="dateModified" datetime="2020-06-22T21:56:39+08:00">2020-06-22</time>
+                <time title="修改时间：2020-09-26 17:57:47" itemprop="dateModified" datetime="2020-09-26T17:57:47+08:00">2020-09-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -902,7 +1043,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-02-28 23:34:50" itemprop="dateModified" datetime="2019-02-28T23:34:50+08:00">2019-02-28</time>
+                <time title="修改时间：2020-09-26 17:57:22" itemprop="dateModified" datetime="2020-09-26T17:57:22+08:00">2020-09-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -930,7 +1071,7 @@
           <p>&copy; 原创内容，转载请注明出处。</p>
 <blockquote>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
-<li>操作系统：  Windows10</li>
+<li>操作系统：  Windows10到</li>
 <li>芯片类型：  STM32F103ZET6</li>
 <li>环境：      Atollic TrueSTUDIO V9.2.0</li>
 <li>工具：      ST-Link(淘宝十块买的)</li>
@@ -944,81 +1085,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="armbug.com/2019/02/07/%E6%B5%8B%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="我是一个酸菜鱼">
-      <meta itemprop="description" content="点灯工程师">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我是一个酸菜鱼的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/02/07/%E6%B5%8B%E8%AF%95/" class="post-title-link" itemprop="url">图片测试</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-02-07 13:08:13" itemprop="dateCreated datePublished" datetime="2019-02-07T13:08:13+08:00">2019-02-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-17 19:57:58" itemprop="dateModified" datetime="2019-11-17T19:57:58+08:00">2019-11-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <img src="/2019/02/07/%E6%B5%8B%E8%AF%95/1.jpg" class="" title="生活照">
       
     </div>
 
@@ -1081,7 +1147,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1094,7 +1160,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">24</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
