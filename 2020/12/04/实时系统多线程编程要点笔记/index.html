@@ -46,16 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="点灯工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我是一个酸菜鱼的博客">
-<meta property="og:url" content="armbug.com&#x2F;archives&#x2F;page&#x2F;2&#x2F;index.html">
+  <meta name="description" content="&amp;copy; 原创内容，转载请注明出处。 实时系统多线程编程要点 线程通常是被动的，实时操作系统通常是等待外界事件发生，然后进行相应的服务。  12345678void thread(void* paramenter)&amp;#123;    for(;;)    &amp;#123;        &#x2F;&#x2F;阻塞等待事件发生        &#x2F;&#x2F;对事件进行服务、进行处理    &amp;#125;&amp;#125;">
+<meta name="keywords" content="RTOS笔记,RTOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实时系统多线程编程要点笔记">
+<meta property="og:url" content="armbug.com&#x2F;2020&#x2F;12&#x2F;04&#x2F;%E5%AE%9E%E6%97%B6%E7%B3%BB%E7%BB%9F%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E8%A6%81%E7%82%B9%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="我是一个酸菜鱼的博客">
-<meta property="og:description" content="点灯工程师">
+<meta property="og:description" content="&amp;copy; 原创内容，转载请注明出处。 实时系统多线程编程要点 线程通常是被动的，实时操作系统通常是等待外界事件发生，然后进行相应的服务。  12345678void thread(void* paramenter)&amp;#123;    for(;;)    &amp;#123;        &#x2F;&#x2F;阻塞等待事件发生        &#x2F;&#x2F;对事件进行服务、进行处理    &amp;#125;&amp;#125;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-12-04T15:37:28.817Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="armbug.com/archives/page/2/">
+<link rel="canonical" href="armbug.com/2020/12/04/%E5%AE%9E%E6%97%B6%E7%B3%BB%E7%BB%9F%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E8%A6%81%E7%82%B9%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
@@ -63,13 +65,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>归档 | 我是一个酸菜鱼的博客</title>
+  <title>实时系统多线程编程要点笔记 | 我是一个酸菜鱼的博客</title>
   
 
 
@@ -199,115 +201,133 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 14 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="armbug.com/2020/12/04/%E5%AE%9E%E6%97%B6%E7%B3%BB%E7%BB%9F%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E8%A6%81%E7%82%B9%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="我是一个酸菜鱼">
+      <meta itemprop="description" content="点灯工程师">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我是一个酸菜鱼的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          实时系统多线程编程要点笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-12-04 23:29:02 / 修改时间：23:37:28" itemprop="dateCreated datePublished" datetime="2020-12-04T23:29:02+08:00">2020-12-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
+        <p>&copy; 原创内容，转载请注明出处。</p>
+<h1 id="实时系统多线程编程要点"><a href="#实时系统多线程编程要点" class="headerlink" title="实时系统多线程编程要点"></a>实时系统多线程编程要点</h1><blockquote>
+<p>线程通常是被动的，实时操作系统通常是等待外界事件发生，然后进行相应的服务。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void thread(void* paramenter)</span><br><span class="line">&#123;</span><br><span class="line">    for(;;)</span><br><span class="line">    &#123;</span><br><span class="line">        //阻塞等待事件发生</span><br><span class="line">        //对事件进行服务、进行处理</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<a id="more"></a>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-02-16T11:25:02+08:00"
-              content="2019-02-16">
-          02-16
-        </time>
-      </div>
+<blockquote>
+<p>一次性服务程序，线程启动后持续执行，直到消亡，多用于初始化。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void thread(void* paramenter)</span><br><span class="line">&#123;</span><br><span class="line">    for(;;)</span><br><span class="line">    &#123;</span><br><span class="line">        //处理事务1</span><br><span class="line">        //处理事务2</span><br><span class="line">        //处理事务3</span><br><span class="line">        //...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/02/16/TrueSTUDIO-STM32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url">
-            <span itemprop="name">TrueSTUDIO STM32环境搭建</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-02-07T13:08:13+08:00"
-              content="2019-02-07">
-          02-07
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/02/07/%E6%B5%8B%E8%AF%95/" itemprop="url">
-            <span itemprop="name">图片测试</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-    <div class="collection-year">
-      <h1 class="collection-header">2018</h1>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-12-07T20:29:41+08:00"
-              content="2018-12-07">
-          12-07
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2018/12/07/test2/" itemprop="url">
-            <span itemprop="name">长恨歌</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-12-06T11:19:43+08:00"
-              content="2018-12-06">
-          12-06
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2018/12/06/test/" itemprop="url">
-            <span itemprop="name">测试</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+<blockquote>
+<p>设计一个线程的要素</p>
+</blockquote>
+<ul>
+<li>名称信息：用于线程调试</li>
+<li>线程栈大小</li>
+<li>线程时间片</li>
+<li>优先级：实时系统线程设计的关键</li>
+<li><blockquote>
+<p>与实时性需求相关的线程应该设置的比较高</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>每次运行的时间短且运行间隔长的任务优先级可以提高</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>管理类线程优先级应该提高</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>不重要的运行时间长的线程优先级应该降低</p>
+</blockquote>
+</li>
+</ul>
 
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/RTOS%E7%AC%94%E8%AE%B0/" rel="tag"># RTOS笔记</a>
+              <a href="/tags/RTOS/" rel="tag"># RTOS</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2020/09/26/%E8%B7%A8%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7deepin15-11%E5%88%B0deepinv20/" rel="next" title="跨版本升级deepin15.11到deepinv20">
+                  <i class="fa fa-chevron-left"></i> 跨版本升级deepin15.11到deepinv20
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-  </nav>
-
 
 
           </div>
@@ -336,6 +356,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#实时系统多线程编程要点"><span class="nav-number">1.</span> <span class="nav-text">实时系统多线程编程要点</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
